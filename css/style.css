@@ -1,0 +1,1103 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------
+    
+       ********** Table of Contents **********
+
+01. =google fonts
+02. =variables
+03. =base
+04. =header
+05. =section 1 et 2
+06. =section 3
+07. =section 4
+08. =section 5
+09. =section 6
+10. =footer
+11. =viewport tablette
+12. =viewpote phone
+13. =version imprimer
+-----------------------------------------------*/
+
+
+
+
+
+/* ---------------------------- 
+        01 := google fonts 
+---------------------------- */
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.eot');
+    src: url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.woff') format('woff'),
+         url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.ttf') format('truetype'),
+         url('fonts/open_sans/opensans-variablefont_wdthwght-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'gloria_hallelujah';
+    src: url('fonts/gloria/gloriahallelujah-regular-webfont.eot');
+    src: url('fonts/gloria/gloriahallelujah-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gloria/gloriahallelujah-regular-webfont.woff2') format('woff2'),
+         url('fonts/gloria/gloriahallelujah-regular-webfont.woff') format('woff'),
+         url('fonts/gloria/gloriahallelujah-regular-webfont.ttf') format('truetype'),
+         url('fonts/gloria/gloriahallelujah-regular-webfont.svg#gloria_hallelujahregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ----------------------------
+        02 := variables
+---------------------------- */
+:root{
+    /* j'ai pref créer des var pour ne pas a avoir a réecrire a chaque fois les couleurs*/
+    --bleu-industriel: rgba(33, 44, 64, 1);
+    --parme-light: rgba(245, 249, 255, 1);
+    --or: rgba(230, 207, 136, 1);
+    --bleu: rgba(87, 120, 184, 1);
+    --blanc: rgba(255, 255, 255, 1);
+    --noir: rgba(0, 0, 0, 1);
+    --gris: rgba(51, 51, 51, 1);
+}
+
+
+
+
+
+
+
+
+/* ---------------------------- 
+        03 := base
+---------------------------- */
+    /* les propriétés communes des balises */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--bleu);
+}
+
+a:hover{
+    color: var(--blanc);
+}
+
+h2{
+    color: var(--noir);
+    font-size: 3.5rem;
+    padding: 20px;
+    border-bottom: 4px solid var(--or);
+}
+
+h3{
+    color: var(--noir);
+    font-size: 2.5rem;
+}
+
+p{
+    color: var(--gris);
+    font-size: 0.9rem;
+}
+
+button{
+    width: 80px;
+    height: 80px;
+    background-color: var(--or);
+    border: none;
+}
+
+button a{
+    color: var(--blanc);
+    font-size: 1.05rem;
+}
+
+    /* toutes mes images prennent 100% de la largeur du parent */
+figure img{
+    width: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.container{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        04 := header
+---------------------------- */
+header{
+    background-color: var(--bleu-industriel);
+    width: 27%;
+    padding-top: 3%;
+    padding-right: 6%;
+}
+
+header article{
+    height: 100vh;
+    position: fixed;
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+header article figure{
+    width: 80%;
+}
+
+header article .icon{
+    width: 22%;
+    margin-top: 20%;
+    margin-bottom: 12%;
+    margin-right: 25%;
+}
+
+header article .icon i{
+    font-size: 1.8rem;
+    color: rgb(35, 104, 247);
+}
+
+header label, header input, header span{
+    display: none;
+}
+
+header article nav{
+    text-align: right;
+    margin-top: 20%;
+}
+
+header article nav ul li{
+    list-style: none;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'gloria_hallelujah';
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        05 := section 1 et 2
+---------------------------- */
+.container1{
+    width: 73%;
+}
+
+h1, figure.portrait, article.s_titre1{
+    width: 50%;
+}
+
+h1{ 
+    color: var(--or);
+    font-size: 7rem;
+    padding-left: 5%;
+    padding-top: 13%;
+    font-family: 'open_sans';
+}
+
+figure.portrait img{
+    height: 100vh; /*sinon l'image dépasse la longueur du cadre*/
+}
+
+article.s_titre1 h2{
+    margin-top: 11%;
+    width: 63%;
+    padding-right: 9%;
+    padding-left: 18%;
+    margin-left: -45px;
+}
+
+article.s_titre1 p{
+    margin-top: 12%;
+    margin-bottom: 12%;
+}
+
+article.s_titre1 p, article.s_titre1 button{
+    margin-left: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        06 := section 3
+---------------------------- */
+
+section.leadership{
+    justify-content: space-around;
+    padding-top: 2%;
+    height: max-content;
+}
+
+article.one, article.two{
+    width: 45%;
+}
+
+article.one figure, article.one figure img{
+    width: 100%;
+    height: 300px;
+}
+
+article.one h2{
+    width: 85%;
+    margin-top: 6%;
+    margin-bottom: 8%;
+    margin-left: -15%;
+    padding-left: 15%;
+}
+
+article.one p{
+    margin-left: 12%;
+    padding-top: 15px;
+    width: 80%;
+}
+
+.two section{
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-left: 2%;
+    padding-right: 8%;
+    height: max-content;
+}
+
+.two section article{
+    width: 47%;
+}
+
+article.two h3{
+    width: 100%;
+}
+
+.two section article p, .two section article span{
+    padding-top: 13%;
+}
+
+section.row + figure{
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 8%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        07 := section 4
+---------------------------- */
+
+.sect4{
+    margin-top: 120px;
+}
+
+.sect4 article{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.gauche{
+    margin-top: 50px;
+    padding-left: 6%;
+    width: 43%;
+    height: 350px;
+}
+
+.gauche img{
+    width: 96%;
+    height: 350px;
+}
+
+.droite{
+    width: 56%;
+    height: 400px;
+    background-color: var(--parme-light);
+    padding: 10%;
+}
+
+.droite p{
+    margin-top: 20px;
+    font-size: 0.8rem; 
+}
+
+.sect4 article h3{
+    width: 15%;
+    position: absolute;
+    right: 20%;
+    margin-top: -6.5%;
+}
+
+.bas{
+    width: 100%;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: max-content;
+}
+
+.bas section{
+    width: 48%;
+    height: max-content;
+}
+
+.bas section span{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.bas section p + p{
+    margin-top: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        08 := section 5
+---------------------------- */
+
+.sect4 + section{
+    justify-content: space-between;
+    height: 125vh;
+    margin-top: 5%;
+}
+.a-gauche{
+    width: 45%;
+}
+
+.a-gauche h2{
+    width: 78%;
+    margin-bottom: 12%;
+    margin-left: -8%;
+    padding-left: 15%;
+    order: 1;
+    /* je vais changer l'ordre dans le responsive */
+}
+
+.a-gauche p{
+    margin-left: 16%;
+    margin-bottom: 3%;
+    order: 2;
+}
+
+.a-gauche figure{
+    width: 100%;
+    height: 300px;
+    padding-left: 10%;
+    margin-top: 8%;
+    order: 3;
+}
+
+.a-gauche figure img{
+    height: 300px;
+}
+
+.a-droite{
+    width: 50%;
+}
+
+.a-droite figure{
+    width: 65%;
+    height: 410px;
+    margin-bottom: 6%;
+}
+
+.a-droite figure img{
+    height: 410px;
+}
+
+.a-droite section article{
+    width: 48%;
+}
+
+/* 
+    je veux mettre un margin a tous les p des deux articles 
+    sauf au premier p du premier article
+    et jai remarque justement que tous mes p sauf le premier sont precede d'un span
+    cest pour cela que jai pris tous les p apres les span
+    comme ca on enleve le premier p
+*/
+.a-droite span ~ p{
+    margin-top: 9%;
+}
+
+.a-droite p + span{
+    margin-top: 9%;
+}
+
+.a-droite section article + article{
+    width: 40%;
+    margin-right: 4%;
+    margin-left: 8%;
+}
+
+.a-droite button{
+    margin-top: 12%;
+}
+
+.a-droite a{
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        09 := section 6
+---------------------------- */
+
+.sect6{
+    height: max-content;
+}
+
+.chiffre{
+    width: 100%;
+    background-color: var(--parme-light);
+    justify-content: space-between;
+    padding: 2% 6% 6% 6%;
+}
+
+.chiffre span{
+    width: 20%;
+    font-size: 4.4rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.chiffre span span{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.personne{
+    width: 100%;
+}
+
+.personne section{
+    width: 50%;
+    height: max-content;
+    padding-top: 9%;
+    padding-left: 7%;
+    padding-right: 9%;
+}
+
+.personne section.raymond{
+    padding-top: 9%;
+    padding-left: 2%;
+    padding-right: 4%;
+}
+
+.personne section article{
+    width: 95%;
+}
+
+.personne section article figure{
+    width: 45%;
+}
+
+.personne .raymond article figure{
+    width: 34%;
+}
+
+.personne hgroup{
+    width: 40%;
+    height: max-content;
+    padding-left: 4%;
+    border-bottom: 3px solid var(--or);
+}
+
+.personne .deux{
+    width: 42%;
+}
+
+.personne hgroup h3{
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: max-content;
+}
+
+.personne hgroup h4{
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+    color: var(--gris);
+}
+
+.personne section p{
+    width: 100%;
+    color: var(--gris);
+    font-style: italic; 
+    display: flex;
+    align-self: flex-end;
+    margin-top: 5%;
+}
+
+.personne section p::before{
+    content: "“";
+    font-size: 6rem;
+    color: var(--or);
+    margin-left: -5%;
+    margin-right: 3%;
+    margin-top: -5%;
+}
+
+.personne .raymond p::before{
+    margin-top: -4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------
+        10 := footer
+---------------------------- */
+
+footer h2{
+    width: max-content;
+    padding-left: 8%;
+    padding-right: 5%;
+    margin-left: -4%;
+}
+
+footer form{
+    width: 58%;
+    margin-left: 10%;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+footer input{
+    width: 95%;
+    height: 40px;
+    border: none;
+    background-color: var(--parme-light);
+    margin-top: 5%;
+}
+
+.textarea, .textarea + article{
+    width: 100%;
+}
+
+.textarea label{
+    margin-top: 30px;
+}
+
+.textarea textarea{
+    width: 98%;
+    height: 130px;
+    border: none;
+    background-color: var(--parme-light);
+    margin-top: 2%;
+}
+
+footer button{
+    color: white;
+    margin-top: 10%;
+}
+
+form article p{
+    width: 48%;
+    font-size: 0.8rem;
+    margin: auto;
+    margin-top: 12%;
+}
+
+footer section{
+    height: max-content;
+    background-color: var(--parme-light);
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+footer p a,footer p a:hover{
+    text-decoration: none;
+    color: var(--noir);
+}
+
+footer span{
+    margin-top: 1%;
+    font-size: 0.8rem;
+}
+
+footer i{
+    font-size: 4rem;
+    color: rgb(28, 101, 248);
+    margin-top: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+        11 := viewport tablette 
+------------------------------- */
+
+@media screen and (min-width:577px) and (max-width:960px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        width: 100%;
+        height: 120px;
+        padding: 0;
+        position: fixed;
+    }
+
+    header article{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: -65px;
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+    }
+
+    header figure, header .icon{
+        display: none;
+    }
+
+    header nav{
+        width: 100%;
+        margin-top: 150px !important;
+        text-align: center;
+    }
+
+    header ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    header ul li{
+        width: max-content;
+        text-align: center;
+    }
+
+
+
+    .container1{
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    main section{
+        height: max-content;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    figure.portrait img{
+        height: 60vh;
+    }
+
+    article.s_titre1 h2{
+        width: 100%;
+    }
+
+    button{
+        height: 50px;
+    }
+
+    .sect4 + section{
+        height: max-content;
+    }
+
+    article.one p{
+        margin-left: 3%;
+        padding-top: 15px;
+        width: 90%;
+    }
+
+    .two section{
+        flex-direction: column;
+    }
+
+    .two section article{
+        width: 100%;
+    }
+
+    .a-droite figure{
+        width: 75%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+        12 := viewport phone
+------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        height: max-content!important;
+    }
+
+    /* construction du meu hamburger */
+    header{
+        position: absolute;
+        background-color: var(--blanc);
+    }
+
+    header figure, header .icon{
+        display: none;
+    }
+
+    header article{
+        width: 100%;
+        display: flex;
+        align-self: flex-start;
+        align-items: flex-start;
+    }
+
+    header article nav{
+        width: 100%;
+        margin-top: 0 !important;
+        display: block;
+        position: relative;
+        top: 4%;
+        left: 4%;   
+        z-index: 1;   
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    header nav input{
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0; 
+        z-index: 2; 
+        -webkit-touch-callout: none;
+    }
+
+    header nav span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: var(--or);
+        border-radius: 3px; 
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+
+    header nav span:first-child{
+        transform-origin: 0% 0%;
+    }
+
+    header nav span:nth-last-child(2){
+      transform-origin: 0% 100%;
+    }
+
+    header nav input:checked ~ span{
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: var(--bleu);
+    }
+
+    header nav input:checked ~ span:nth-last-child(3){
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    header nav input:checked ~ span:nth-last-child(2){
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    header nav ul{
+      position: absolute;
+      width: 50%;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+    
+      background: var(--bleu-industriel);
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    header nav ul li{
+      padding: 10px 0;
+      font-size: 0.8rem;
+    }
+
+    header nav input:checked ~ ul{
+      transform: none;
+    }
+
+
+
+    .container1{
+        width: 100%;
+    }
+
+    /* section 1*/
+    .sect1{
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sect1 figure{
+        display: none;
+    }
+
+    /* section 2*/
+    .s_titre1{
+        padding-left: 5%;
+    }
+
+    .s_titre1 h2{
+        font-size: 2.1rem;
+        width: 90% !important;
+    }
+
+    .s_titre1 p, .s_titre1 button{
+        margin-left: 0 !important;
+    }
+
+    .s_titre1 + figure, .s_titre1 +figure img{
+        margin-top: 5%;
+        height: 300px;
+    }
+
+    button{
+        width: 70px;
+        height: 50px;
+    }
+
+    button a{
+        font-size: 0.8rem;
+    }
+
+    /* section 3 et 5*/
+    .leadership, #coaching{
+        flex-direction: column;
+    }
+
+    .one, .two, .a-droite, .a-gauche{
+        width: 100% !important;
+    }
+
+
+    /* section 4*/
+    .sect4 .gauche{
+        padding-left: 0!important;
+        height: 300px;
+    }
+
+    .sect4 .gauche img{
+        height: 300px;
+    }
+
+    .sect4 .droite{
+        height: 350px;
+    }
+
+    .sect4 article h3{
+        font-size: 1.5rem;
+    }
+
+    /* section 5*/
+    .a-gauche figure{
+        order: 1;
+        padding: 0;
+    }
+
+    .a-gauche h2{
+        order: 2;
+    }
+
+    .a-gauche p{
+        order: 3;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .a-droite figure{
+        align-self: center;
+    }
+
+    .a-droite .left{
+        padding-left: 3%;
+    }
+
+    .a-droite button{
+        width: 90px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+        13 := version imprimer 
+------------------------------- */
+
+@media print{
+    footer, figure, header a, header nav{
+        display: none;
+    }
+
+    .container1{
+        width: 100%;
+        padding:0;
+        margin:0;
+    }
+
+    body{
+        margin: 2cm;
+    }
+}
